@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.shuang.commons</groupId>
+    <artifactId>shuang-monitor-center</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+
+    <description>监控报警中心</description>
+    <!--个人博客地址-->
+    <url>https://www.jianshu.com/u/234a2cac6337</url>
+
+    <modules>
+        <module>shuang-hystrix-dashboard-server</module>
+        <module>shuang-hystrix-dashboard-turbine</module>
+        <module>shuang-hystrix-turbine-server</module>
+        <module>shuang-monitor-admin-server</module>
+
+    </modules>
+
+</project>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.shuang.commons</groupId>
+        <artifactId>shuang-spring-boot-starter-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modules>
+        <module>shuang-file-upload-bean</module>
+        <module>shuang-file-upload-common</module>
+        <module>shuang-file-upload-core</module>
+        <module>shuang-file-upload-rest</module>
+        <module>shuang-file-upload-sdk</module>
+    </modules>
+    <properties>
+        <projects.version>1.0-SNAPSHOT</projects.version>
+    </properties>
+
+    <groupId>com.shuang.commons</groupId>
+    <artifactId>shuang-file-upload</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>上传下载服务</description>
+
+    <!--管理依赖-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-file-upload-bean</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-file-upload-common</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-file-upload-core</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-file-upload-sdk</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

@@ -1,0 +1,17 @@
+## 如果您觉得本项目对你有用，请随手star，谢谢
+技术文章地址：https://www.jianshu.com/u/234a2cac6337
+
+# shuang-file-upload
+文件上传组件支持aliyun oss与aws s3存储上传
+基于腾讯云cos 文件上传下载服务 
+
+1，解决了fegin不能传递 MultipartFile 类型文件
+
+2，实现多种文件类型的上传
+
+3，基于apollo作为动态配置
+
+4，服务项目结构（推荐）
+
+
+ 

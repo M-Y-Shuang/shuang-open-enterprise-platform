@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.shuang.commons</groupId>
+        <artifactId>shuang-spring-boot-starter-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modules>
+        <module>shuang-commons-multi-mongodb</module>
+        <module>shuang-commons-multi-kafka</module>
+        <module>shuang-commons-multi-jpa-annotation</module>
+        <module>shuang-commons-multi-jpa-scanpackage</module>
+        <module>shuang-commons-multi-shardingjdbc</module>
+        <module>shuang-commons-multi-jdbctemplate</module>
+        <module>shuang-commons-multi-mybatis-annotation</module>
+        <module>shuang-commons-multi-mybatis-scanpackage</module>
+    </modules>
+
+    <properties>
+        <projects.version>1.0-SNAPSHOT</projects.version>
+    </properties>
+
+    <groupId>com.shuang.commons</groupId>
+    <artifactId>shuang-commons-multi</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>各种 组件 多数据源配置</description>
+
+    <!-- 管理依赖   -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-multi-mongodb</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-multi-jpa-annotation</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-multi-jpa-scanpackage</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-multi-jdbctemplate</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-multi-shardingjdbc</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-multi-mybatis-annotation</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-multi-mybatis-scanpackage</artifactId>
+                <version>${projects.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

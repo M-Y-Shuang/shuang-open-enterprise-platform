@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--parent-->
+    <parent>
+        <groupId>com.shuang.commons</groupId>
+        <artifactId>shuang-spring-boot-dependencies</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.shuang.commons</groupId>
+    <artifactId>shuang-spring-boot-starter-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+
+    <description>shuang所有spring-boot项目的parent pom.xml所有的spring-boot应用都继承该pom.xml</description>
+
+    <!--个人博客地址-->
+    <url>https://www.jianshu.com/u/234a2cac6337</url>
+
+    <!--版本管理-->
+    <properties>
+        <shuang-commons-support.version>1.0-SNAPSHOT</shuang-commons-support.version>
+        <shuang-commons-support-web.version>1.0-SNAPSHOT</shuang-commons-support-web.version>
+        <shuang-spring-boot-starter-redis.version>1.0-SNAPSHOT</shuang-spring-boot-starter-redis.version>
+        <shuang-spring-boot-starter-lock.version>1.0-SNAPSHOT</shuang-spring-boot-starter-lock.version>
+        <shuang-spring-boot-starter-log.version>1.0-SNAPSHOT</shuang-spring-boot-starter-log.version>
+        <shuang-spring-boot-starter-datadog.version>1.0-SNAPSHOT</shuang-spring-boot-starter-datadog.version>
+        <shuang-spring-boot-starter-mail.version>1.0-SNAPSHOT</shuang-spring-boot-starter-mail.version>
+        <shuang-file-upload-sdk>1.0-SNAPSHOT</shuang-file-upload-sdk>
+    </properties>
+
+    <!--构建maven需要的最低版本-->
+    <prerequisites>
+        <maven>3.2.1</maven>
+    </prerequisites>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-support</artifactId>
+                <version>${shuang-commons-support.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-commons-support-web</artifactId>
+                <version>${shuang-commons-support-web.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-spring-boot-starter-redis</artifactId>
+                <version>${shuang-spring-boot-starter-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-spring-boot-starter-lock</artifactId>
+                <version>${shuang-spring-boot-starter-lock.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-spring-boot-starter-log</artifactId>
+                <version>${shuang-spring-boot-starter-log.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-spring-boot-starter-datadog</artifactId>
+                <version>${shuang-spring-boot-starter-datadog.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-spring-boot-starter-mail</artifactId>
+                <version>${shuang-spring-boot-starter-mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shuang.commons</groupId>
+                <artifactId>shuang-file-upload-sdk</artifactId>
+                <version>${shuang-file-upload-sdk.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!--构建项目-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${java.encoding}</encoding>
+                </configuration>
+                <version>${maven-compiler-plugin.version}</version>
+            </plugin>
+            <!--源代码插件，打包时会将源码打出来-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-source</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

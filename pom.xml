@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.shuang.commons</groupId>
+    <artifactId>shuang-open-enterprise-platform</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+
+    <description>开发的企业级应用平台</description>
+    <!--个人博客地址-->
+    <url>https://www.jianshu.com/u/234a2cac6337</url>
+
+    <modules>
+        <module>shuang-business-center</module>
+        <module>shuang-support</module>
+        <module>shuang-demo</module>
+        <module>shuang-gateway-center</module>
+        <module>shuang-spring-boot-starter</module>
+        <module>shuang-generator-center</module>
+        <module>shuang-monitor-center</module>
+        <module>shuang-eureka-server</module>
+        <module>shuang-spring-boot-dependencies</module>
+        <module>shuang-spring-boot-starter-parent</module>
+
+    </modules>
+
+</project>
